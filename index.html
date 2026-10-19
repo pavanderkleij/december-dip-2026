@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f1e5">
+  <meta name="description" content="December-Dip bij Paul. Eerst een duik, dan je favoriete dips en glühwein van Killian.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>December-Dip · Je bent uitgenodigd</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="inhoud.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="intro">
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round"><path d="M12 2v20M3.34 7l17.32 10M3.34 17 20.66 7M8.5 4.5 12 8l3.5-3.5M8.5 19.5 12 16l3.5 3.5M3.6 11l4.8-.8-1.6-4.5M17.2 18.3l-1.6-4.5 4.8-.8M6.8 18.3l1.6-4.5-4.8-.8M20.4 11l-4.8-.8 1.6-4.5"/></g></symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M19 3C9 1 1 7 5 16c7 6 15-1 14-13Z" fill="currentColor"/><path d="m3 22 12-15M7 17l-1-7m4 3 6-1" fill="none" stroke="#775442" stroke-width="1" stroke-linecap="round"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 1 2.7 7.8L23 12l-8.3 2.7L12 23l-2.7-8.3L1 12l8.3-3.2Z" fill="currentColor"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="weather" id="weather" aria-hidden="true"></div>
+  <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Animaties pauzeren" title="Animaties pauzeren" aria-pressed="false">
+    <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 6v12M15.5 6v12"/></svg>
+    <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg>
+  </button>
+
+  <main class="site-shell">
+    <section class="intro page" id="intro" aria-labelledby="intro-title">
+      <div class="intro-heading">
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#icon-star"/></svg> EEN UITNODIGING VAN PAUL <svg aria-hidden="true"><use href="#icon-star"/></svg></p>
+        <h1 class="display-title" id="intro-title"><span>December-</span><em>Dip<span class="title-dot">.</span></em></h1>
+        <p class="intro-tagline">Eerst het water in.<br>Dan het brood erin.</p>
+      </div>
+
+      <div class="shore-scene">
+        <svg id="shore-art" class="scene-svg" viewBox="0 0 480 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="shore-title shore-desc">
+          <title id="shore-title">Een frisse decemberduik</title>
+          <desc id="shore-desc">Links ligt het water. Rechts staat een zwemmer met een muts op een grasoever naast één boom. Tik op de pagina en de zwemmer duikt het water in.</desc>
+          <defs>
+            <clipPath id="scene-clip"><rect width="480" height="370" rx="8"/></clipPath>
+            <pattern id="water-hatch" width="38" height="24" patternUnits="userSpaceOnUse"><path d="M4 14h8m12-8h7" fill="none" stroke="#356c71" stroke-width=".65" opacity=".17"/></pattern>
+            <pattern id="grass-hatch" width="28" height="24" patternUnits="userSpaceOnUse"><path d="m8 18-2-5m2 5 3-4" fill="none" stroke="#546046" stroke-width="1" opacity=".3"/></pattern>
+          </defs>
+          <g clip-path="url(#scene-clip)" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="89" cy="80" r="35" fill="#e6c47e" opacity=".68"/>
+            <g fill="none" stroke="#b9bbae" stroke-width="1.35">
+              <path d="M19 101c15-6 27-6 40-3m-5 9c12-4 24-3 33 0"/>
+              <path d="M176 57q7-8 14 0 8-8 15-1M158 74q5-5 10 0 5-5 10 0" stroke="#6b7870"/>
+            </g>
+            <path d="M0 206q38-14 73-5t78 0q54-12 95 2t77 1v65H0Z" fill="#d4d8c4"/>
+            <path d="M0 219q49 3 100-4t100 7q65-2 101-7v85H0Z" fill="#b4c9bd"/>
+            <path d="M0 240q46-11 100-5t99 0q66 2 101 14l24 121H0Z" fill="#99bdbc"/>
+            <path d="M0 241q67 5 121-1t133 6" fill="none" stroke="#4d8283" stroke-width="1.3"/>
+            <path d="M308 233c25-8 29-20 65-18s62 8 107-3v158H279c-32-41-34-66-10-89 8-10 30-17 39-48Z" fill="#b7bd87" stroke="#636c49" stroke-width="1.7"/>
+            <path d="M307 247c22-5 26-21 58-19s69 8 115-3v145H303c-21-32-34-51-21-74 11-18 21-26 25-49Z" fill="#a5ac76"/>
+            <path d="M308 234c25-8 29-20 65-18s62 8 107-3v157H279c-32-41-34-66-10-89 8-10 30-17 39-47Z" fill="url(#grass-hatch)"/>
+            <path d="M307 237c-3 18-21 35-36 46" fill="none" stroke="#e4d4a7" stroke-width="7"/>
+            <path d="M317 231q-2-8 2-14m1 13 7-9m-13 12-5-5M367 266l-3-8m4 8 5-9M442 240l-3-8m4 8 5-7M419 308l-4-9m5 8 4-9" fill="none" stroke="#5e704d" stroke-width="1.5"/>
+            <g id="tree">
+              <path d="M400 227c8-48 3-82 4-123-11-19-21-39-26-59 12 18 22 31 31 39 3-33 0-53-3-75 12 20 16 39 15 66 12-8 22-22 32-42-2 24-15 48-31 62 0 32 2 73 8 133Z" fill="#987450" stroke="#554e3c" stroke-width="2"/>
+              <path d="M414 207c-2-38-2-72 0-101m-2-18 1-37m9 44 14-21M403 105l-20-11-17-25m22 25-21-3" fill="none" stroke="#554e3c" stroke-width="2"/>
+              <path d="M400 225q-10 3-16 9m40-7 15 8" fill="none" stroke="#554e3c" stroke-width="2"/>
+              <g fill="#b75f3d" stroke="#704c36" stroke-width="1.1">
+                <path d="M376 44c-18 1-23-13-23-22 15-1 26 6 23 22Z"/>
+                <path d="M424 34c-7-17 2-29 13-31 8 15 5 24-13 31Z"/>
+                <path d="M450 60c1-17 15-23 25-17-3 15-13 22-25 17Z"/>
+                <path d="M367 92c-10 6-23 1-28-9 12-8 24-5 28 9Z"/>
+              </g>
+              <g fill="#d2a552" stroke="#8a6c40" stroke-width="1.1">
+                <path d="M393 58c-15-4-20-15-13-27 13 1 19 11 13 27Z"/>
+                <path d="M439 82c9-14 23-11 30-4-7 12-18 15-30 4Z"/>
+                <path d="M408 20c-10-3-14-12-10-20 11 1 15 8 10 20Z"/>
+              </g>
+              <path d="m357 28 16 13m55-29-3 17m29 27 16-10m-124 39 15 5m22-51 6 14m55 29 18-1" fill="none" stroke="#80593c" stroke-width="1"/>
+            </g>
+            <g fill="#bf744c" opacity=".85"><path d="m350 252 12-4-5 8Z"/><path d="m446 276 13 3-9 5Z"/><path d="m394 237 7 4 4-8Z"/></g>
+            <ellipse id="diver-shadow" cx="317" cy="252" rx="27" ry="5.5" fill="#53624b" opacity=".24"/>
+            <g id="diver" transform="translate(315 250)">
+              <!-- Filled, shaped limbs rather than a stick figure. -->
+              <g stroke="#524337" stroke-width="1.8">
+                <path d="M-4-59c0 16 3 27 0 40l-7 15c-3 5 0 7 8 6l13-3c3-1 2-5-3-5l2-16 6-36Z" fill="#c98c69"/>
+                <path d="M-24-62c-4 19-1 35-1 50l-8 9c-4 5-2 8 4 7l16-3c4-1 4-6-1-7l3-22 5-31Z" fill="#e1a57e"/>
+                <path d="M-19-137c-16 7-18 22-15 38l6 29c11 7 28 8 40 1l-5-27c-2-18-4-33-17-39Z" fill="#e1a57e"/>
+                <path d="M-28-85q19 9 38 0l6 29-18 4-7-14-4 14-20-5Z" fill="#b7543b"/>
+                <path d="m-24-80-3 23m12-20-2 24m16-23 6 21" fill="none" stroke="#f2d3a7" stroke-width="4"/>
+                <path d="M-28-85q19 9 38 0l2 7q-17 6-39-1Z" fill="#eee1c3"/>
+                <path d="m-6-80-1 8m0-6 6 5" fill="none" stroke="#63533d" stroke-width="1"/>
+                <path d="m-24-136 1-14 16-1 1 17" fill="#d59772"/>
+                <path d="M-36-161c0-13 10-22 22-18 12 4 18 16 15 27l-2 8-10 1c-4 6-16 4-21-2l-7-1c-3-1-3-4 1-7Z" fill="#e1a57e"/>
+                <path d="M-5-158c6-3 10 4 5 9" fill="#e1a57e"/>
+                <path d="M-36-165c-2-15 8-23 19-22 15 1 23 14 20 29-7 2-10-4-12-7Z" fill="#365f61"/>
+                <path d="M-37-166q18-7 40 5l-2 8q-20-11-37-5Z" fill="#578383"/>
+                <path d="m-29-170 1-8m9 7 1-11m9 12 2-8" fill="none" stroke="#8eb1a5" stroke-width="1.2"/>
+                <circle cx="-18" cy="-190" r="7" fill="#365f61"/>
+                <path d="m-31-150 4-1m-2 10 7 1" fill="none" stroke="#524337" stroke-width="1.6"/>
+                <ellipse cx="-24" cy="-145" rx="4" ry="2.5" fill="#bd6d59" stroke="none" opacity=".55"/>
+                <g id="arms-standing">
+                  <path d="M-23-132c-8-1-11 6-9 13l8 20-12 6c-6 1-7 6-1 8 5 2 10-1 12-3l12-8c4-3 4-6 2-11l-4-18c-1-5-3-7-8-7Z" fill="#e1a57e"/>
+                  <path d="m-34-89 4-1m-2 4 4-2" fill="none" stroke-width=".9"/>
+                  <path d="M0-130c6 0 9 4 10 10l4 15 7 12c3 5 0 9-4 5l-10-13-8-17c-3-6-4-11 1-12Z" fill="#cb8f6d"/>
+                </g>
+                <g id="arms-diving" style="display:none">
+                  <path d="M-23-133c-6-1-9-5-10-11l-5-27-9-24c-3-7 2-11 6-4l13 24 10 25c3 9 2 15-5 17Z" fill="#e1a57e"/>
+                  <path d="M-1-131c-6 0-9-5-11-11l-10-28-18-27c-3-6 2-10 6-5l23 27 16 29c5 9 1 15-6 15Z" fill="#e1a57e"/>
+                </g>
+              </g>
+              <g class="cold-lines" fill="none" stroke="#628788" stroke-width="1.7"><path d="m-52-134-3 7 3 7-3 7M29-135l3 7-3 7 3 7"/></g>
+            </g>
+            <!-- This foreground conceals the swimmer once he enters the water. -->
+            <path d="M0 290q58-8 111 1t100-2q31-5 59 5c-12 25-2 46 22 76H0Z" fill="#99bdbc"/>
+            <path d="M0 290q58-8 111 1t100-2q31-5 59 5c-12 25-2 46 22 76H0Z" fill="url(#water-hatch)"/>
+            <g class="water-ripples" fill="none" stroke="#487b7c" stroke-width="1.5">
+              <path d="M16 269q17-4 34 0m39-13q16-4 33 0M17 323q26-4 49 1m127-13q22-5 44 0M94 346q19-5 41-1"/>
+              <path d="M50 303h25m74-28h20m-15 51h22m43 20h14" stroke="#d9e7d9" stroke-width="2"/>
+            </g>
+            <g id="splash" opacity="0" transform="translate(140 295)">
+              <ellipse class="splash-ring" cy="9" rx="58" ry="9" fill="none" stroke="#eaf0dc" stroke-width="3"/>
+              <path class="splash-crown" d="M-48 3c10-3 10-19 5-30 14 4 21 12 21 21 4-10-1-23-2-32 16 10 17 19 21 28 8-18 15-24 25-28-3 13-11 22-8 28 8-11 19-16 31-15-10 10-12 20-8 25Z" fill="#dce9dc" stroke="#598889" stroke-width="1.2"/>
+              <g class="splash-drops" fill="#dce9dc" stroke="#598889" stroke-width="1"><ellipse cx="-49" cy="-38" rx="4" ry="7" transform="rotate(-25 -49 -38)"/><ellipse cx="-17" cy="-55" rx="3" ry="6"/><ellipse cx="34" cy="-45" rx="4" ry="7" transform="rotate(28 34 -45)"/><ellipse cx="56" cy="-22" rx="3" ry="5" transform="rotate(45 56 -22)"/></g>
+            </g>
+            <g fill="none" stroke="#527377" stroke-width="1.3"><path d="m10 357 22-3m-14 8 31-5"/></g>
+          </g>
+        </svg>
+        <span class="scene-note note-water" aria-hidden="true">de eerste dip <svg viewBox="0 0 56 26"><path d="M2 3c10 17 27 16 47 13m-8-7 10 6-8 8"/></svg></span>
+      </div>
+
+      <div class="intro-action">
+        <a class="dive-button" href="#uitnodiging" id="dive-button"><span>Neem een duik</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        <p class="tap-hint" id="tap-hint">Tik ergens om de uitnodiging te openen</p>
+        <p class="sr-only" role="status" id="dive-status"></p>
+      </div>
+      <div class="intro-bottom" aria-hidden="true"><span>WATER</span><span class="tiny-star">✳</span><span>DIPS</span><span class="tiny-star">✳</span><span>GLÜHWEIN</span></div>
+    </section>
+
+    <article class="invitation page" id="uitnodiging" aria-labelledby="invite-title" hidden>
+      <nav class="invite-nav" aria-label="Navigatie"><a href="#" class="back-link" id="back-link"><svg aria-hidden="true"><use href="#icon-arrow"/></svg> Terug naar de oever</a></nav>
+      <header class="invite-heading">
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#icon-star"/></svg> JE BENT UITGENODIGD <svg aria-hidden="true"><use href="#icon-star"/></svg></p>
+        <h1 class="display-title invite-title" id="invite-title" tabindex="-1"><span>December-</span><em>Dip<span class="title-dot">.</span></em></h1>
+        <p class="invite-tagline">Koude tenen. Warme gezelligheid.</p>
+      </header>
+
+      <div class="feast-scene">
+        <svg class="scene-svg" viewBox="0 0 480 376" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="feast-title feast-desc">
+          <title id="feast-title">Na de duik: samen opwarmen</title>
+          <desc id="feast-desc">Een rillende zwemmer met een gestreepte handdoek rechts, een tafel vol dips en stokbrood ervoor, en links een grote pan glühwein. Achter de pan is ruimte voor de foto van Killian.</desc>
+          <defs>
+            <clipPath id="photo-clip"><rect x="51" y="32" width="131" height="155" rx="3"/></clipPath>
+            <clipPath id="towel-clip"><path d="M329 138q25-16 58-1l15 138q-36 19-80-1Z"/></clipPath>
+            <pattern id="cloth-check" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#efe2c8"/><path d="M0 5h20M5 0v20" stroke="#b45a40" stroke-width="6" opacity=".54"/></pattern>
+          </defs>
+          <g stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 330c104-23 324-23 441 7-58 32-349 37-441-7Z" fill="#d9d6bc" opacity=".42"/>
+            <path d="M21 312q206-12 434 3" fill="none" stroke="#c6c7b3" stroke-width="1"/>
+            <!-- Blank photo slot: deliberately no invented face. -->
+            <g id="photo-frame" transform="rotate(-5 116 113)">
+              <rect x="43" y="24" width="147" height="180" rx="4" fill="#e4d9c2"/>
+              <rect x="46" y="26" width="142" height="174" rx="4" fill="#faf5e9" stroke="#a6987d" stroke-width="1.2"/>
+              <rect x="51" y="32" width="131" height="155" rx="3" fill="#ece5d2"/>
+              <g id="photo-placeholder">
+                <rect x="59" y="40" width="115" height="139" rx="2" fill="none" stroke="#ada487" stroke-dasharray="4 5"/>
+                <path d="M78 79V68h11m55 0h11v11M78 123v11h11m55 0h11v-11" fill="none" stroke="#948e74" stroke-width="1.1"/>
+                <text x="116.5" y="98" text-anchor="middle" fill="#686957" font-family="Georgia, serif" font-size="21" font-style="italic">Killian</text>
+                <text x="116.5" y="119" text-anchor="middle" fill="#777761" font-family="system-ui, sans-serif" font-size="11" letter-spacing=".7">FOTO VOLGT</text>
+              </g>
+              <image id="killian-photo" x="51" y="32" width="131" height="155" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-clip)" style="display:none"/>
+              <path d="m98 23 2-9 32 2-1 10" fill="#d6c4a0" opacity=".65"/>
+            </g>
+            <!-- The pot stands behind the table and in front of the photo. -->
+            <g id="wine-pot" stroke="#554637" stroke-width="1.7">
+              <path d="m27 223 1 80m114-80 2 80" fill="none" stroke="#897253" stroke-width="6"/>
+              <path d="M17 214q56-9 137 1l-2 14q-68-6-134-1Z" fill="#ad8e65"/>
+              <path d="M32 158c-24-15-31 17-3 21m112-21c27-15 33 15 5 20" fill="none" stroke="#665852" stroke-width="8"/>
+              <path d="M32 158c-24-15-31 17-3 21m112-21c27-15 33 15 5 20" fill="none" stroke="#b5aba0" stroke-width="3"/>
+              <path d="M27 151h122l-5 50c-4 22-108 22-112 0Z" fill="#81695e"/>
+              <path d="M37 167v27q1 13 29 15" fill="none" stroke="#ab8d7a" stroke-width="4"/>
+              <ellipse cx="88" cy="151" rx="62" ry="17" fill="#b9aaa0"/>
+              <ellipse cx="88" cy="150" rx="54" ry="11" fill="#7e303c" stroke-width="1.2"/>
+              <path d="M48 149q28-10 76 1" fill="none" stroke="#a65355" stroke-width="2"/>
+              <ellipse cx="74" cy="148" rx="13" ry="5" fill="#cf9553" stroke="#e9b967" stroke-width="2"/>
+              <path d="m68 145 6 6 5-6m-5 0v6" fill="none" stroke="#edc27b" stroke-width="1"/>
+              <path d="m103 151 15-6m-16 8 15-6" stroke="#a76c44" stroke-width="3"/>
+              <path d="m126 143 11-37" stroke="#775d45" stroke-width="5"/>
+              <rect x="60" y="171" width="60" height="25" rx="5" fill="#e9d8b4" stroke="none"/>
+              <text x="90" y="188" font-family="Georgia, serif" font-style="italic" font-size="16" text-anchor="middle" fill="#795440" stroke="none">glühwein</text>
+            </g>
+            <g class="steam" fill="none" stroke="#ada88d" stroke-width="2.3" opacity=".8"><path d="M54 127c-14-18 13-19 1-39"/><path d="M90 126c-14-22 15-22 1-43"/><path d="M110 121c-6-10 8-17 2-26"/></g>
+            <!-- Same swimmer, now wrapped in a towel. -->
+            <g class="shivering-person">
+              <g stroke="#524337" stroke-width="1.8">
+                <path d="m339 270-2 50-7 17c-5 9 1 12 9 9l16-5c5-2 4-6-3-7l7-16 3-46Z" fill="#d49974"/>
+                <path d="m367 271 9 47-1 16c-1 7 3 10 10 8l16 1c8 0 9-6 1-8l-10-4 1-16-4-48Z" fill="#e1a57e"/>
+                <path d="M331 145c0-16 8-28 22-33l2-18 20-1 5 20c19 5 21 22 22 38Z" fill="#e1a57e"/>
+                <path d="M340 65c3-14 16-19 31-14 18 6 24 20 19 37l-4 11c-3 10-18 15-29 8-6-3-9-9-10-15l-7-5c-4-3-4-6 0-8Z" fill="#e1a57e"/>
+                <path d="M385 79c8-4 13 6 5 13" fill="#e1a57e"/>
+                <path d="M338 66c-1-20 14-34 29-31 20 3 29 17 27 40-13-7-31-10-56-9Z" fill="#365f61"/>
+                <path d="M338 65q29-5 55 8l-2 10q-29-12-53-7Z" fill="#578383"/>
+                <path d="m347 56 3-12m7 13 2-14m10 16 1-13m11 17-1-12" fill="none" stroke="#8eb1a5" stroke-width="1.3"/>
+                <circle cx="365" cy="33" r="8" fill="#365f61"/>
+                <path d="m349 83 5-1m16 2 5 2m-21 13 12 2" fill="none" stroke="#524337" stroke-width="1.6"/>
+                <path d="m355 99 2-2 3 4 3-2 3 2" fill="none" stroke-width="1"/>
+                <ellipse cx="350" cy="92" rx="4" ry="3" fill="#bb6c60" stroke="none" opacity=".7"/>
+                <ellipse cx="377" cy="95" rx="5" ry="3" fill="#bb6c60" stroke="none" opacity=".6"/>
+                <path d="M329 138q25-16 58-1l15 138q-36 19-80-1Z" fill="#dbe2ce"/>
+                <g clip-path="url(#towel-clip)" stroke="none" fill="#779b98"><path d="m323 147 78 5 1 16-80-5ZM321 178l82 5 1 17-83-5ZM320 211l85 5 1 17-86-5ZM318 243l92 4 2 17-94-4Z"/><path d="M378 130q-19 65-5 154h13q-14-71 5-149Z" fill="#527e7c" opacity=".33"/></g>
+                <path d="M329 138q25-16 58-1l15 138q-36 19-80-1Z" fill="none"/>
+                <path d="M332 145q22 10 51-4m-44 17-5 95m48-94 9 104" fill="none" stroke="#708f87" stroke-width="1"/>
+                <path d="M334 138c-7-8-13-17-16-10-5 9 1 26 10 27l13-5c6-3 7-7 2-8l-4 1c5-6 0-9-5-5Z" fill="#e1a57e"/>
+                <path d="M383 140c7-10 10-12 14-7 7 8 1 22-8 23l-15-5c-5-2-4-6 1-6l5 1c-3-5-1-8 3-6Z" fill="#e1a57e"/>
+                <path d="m328 145 6 4m-8-1 6 4m59-7-4 5m7-2-6 6" fill="none" stroke-width=".9"/>
+              </g>
+              <g class="cold-lines" fill="none" stroke="#6f9391" stroke-width="1.7"><path d="m303 113-3 8 3 8-3 8m112 9 3 8-3 8 3 8M412 88l3 6-3 6"/></g>
+            </g>
+            <text x="402" y="51" fill="#6d8a81" font-family="Georgia, serif" font-size="19" font-style="italic" transform="rotate(10 402 51)">brrr.</text>
+            <!-- Table in front of the swimmer. -->
+            <g id="dip-table" stroke="#775c40" stroke-width="1.6">
+              <path d="m97 272-10 77 13 1 20-76m266-5 16 76 13-1-8-82" fill="#ac8257"/>
+              <path d="m127 263 2 52 10-1 5-50m214-1 4 49 10 1-1-55" fill="#b79365"/>
+              <path d="M65 241 284 207l149 49-242 42-126-39Z" fill="#b78959"/>
+              <path d="m65 241 219-40 149 44-243 41Z" fill="#d7b47f"/>
+              <path d="m191 286-1 12m242-53v11" fill="none"/>
+              <path d="m87 242 134-23m-45 47 98-16m-2 21 115-19" fill="none" stroke="#b48f60" stroke-width="1"/>
+              <path d="m107 248 34-7 38 37-2 48-40-11 1-39Z" fill="url(#cloth-check)" stroke="#bda788" stroke-width="1"/>
+              <path d="m138 278 35 10m-33 22 33 11" fill="none" stroke="#edddba" stroke-width="1"/>
+            </g>
+            <!-- Bread, cut open and scored. -->
+            <g transform="rotate(-17 290 226)" stroke="#8f603a" stroke-width="1.3">
+              <path d="M236 215c-4-12 9-19 26-18l74 4c17 2 25 11 19 21-4 8-18 10-30 8l-73-4c-8-1-13-4-16-11Z" fill="#cc914e"/>
+              <path d="M245 210q46-7 97 7" fill="none" stroke="#e5b66f" stroke-width="9"/>
+              <path d="m261 203 6 17m17-15 6 18m17-15 6 17m17-13 6 15" fill="none" stroke="#f0d49b" stroke-width="6"/>
+              <path d="m258 205 5 12m17-10 5 12m18-9 5 12m17-7 4 10" fill="none" stroke="#aa753d" stroke-width="1.2"/>
+              <ellipse cx="241" cy="213" rx="12" ry="13" fill="#f0d9a6"/>
+              <g fill="#bf945d" stroke="none"><ellipse cx="237" cy="208" rx="2" ry="1.5"/><ellipse cx="244" cy="210" rx="2.3" ry="2"/><ellipse cx="239" cy="218" rx="2.7" ry="1.6"/><circle cx="246" cy="218" r="1.3"/></g>
+              <ellipse cx="220" cy="216" rx="11" ry="13" fill="#d29c58" transform="rotate(15 220 216)"/>
+              <ellipse cx="219" cy="214" rx="10" ry="11" fill="#f1dca9" transform="rotate(15 219 214)"/>
+              <path d="m214 211 2-1m5 6 2-1m-7 3 1-1" stroke="#bd945e" stroke-width="2"/>
+            </g>
+            <!-- Five different dips in ceramic bowls. -->
+            <g stroke="#665242" stroke-width="1.3">
+              <g transform="translate(169 227)"><path d="M-26-2c2 27 49 27 52 0Z" fill="#e7dfc4"/><ellipse rx="26" ry="9" cy="-2" fill="#efe3bb"/><ellipse rx="21" ry="6" cy="-2" fill="#89a067" stroke="none"/><path d="M-13-2q11-5 26 1" fill="none" stroke="#587450" stroke-width="1"/><g fill="#e2d6b0" stroke="none"><circle cx="-9" cy="-2" r="1.4"/><circle cx="2" cy="-3" r="1.5"/><circle cx="9" cy="0" r="1.2"/></g></g>
+              <g transform="translate(359 247)"><path d="M-28 0c4 26 50 25 56 0Z" fill="#719090"/><ellipse rx="28" ry="9" fill="#d6d8bd"/><ellipse rx="23" ry="6" fill="#ac564f" stroke="none"/><path d="M-15 0c10-7 22 5 29-1" fill="none" stroke="#d8a49a" stroke-width="1.6"/><path d="m-1-2 2 4m6-5-1 4" stroke="#6b7952" stroke-width="2"/></g>
+              <g transform="translate(116 245)"><path d="M-25-1c2 25 46 25 50 0Z" fill="#9eaf9b"/><ellipse rx="25" ry="8" cy="-1" fill="#ede4c9"/><ellipse rx="20" ry="5" cy="-1" fill="#cc7450" stroke="none"/><path d="m-8-3 3 3m7-2 4 2m6-1 3-2" stroke="#f0bb78" stroke-width="1.4"/></g>
+              <g transform="translate(230 266)"><path d="M-35-3c4 35 63 35 70 0Z" fill="#bd6247"/><ellipse rx="35" ry="11" cy="-3" fill="#f0e3c3"/><ellipse rx="29" ry="7.5" cy="-3" fill="#dec48c" stroke="none"/><path d="M-20-3c7-8 44-4 35 1-5 3-22 4-27 0-4-3 11-6 18-2" fill="none" stroke="#bb9854" stroke-width="1.5"/><path d="M-14-4c7-3 22-1 21 0" fill="none" stroke="#c7a23c" stroke-width="2.4"/><g fill="#647747" stroke="none"><path d="m6-7 2 4 5-3-3-2Z"/><path d="m9-7 6-3 1 3-4 2Z"/></g><path d="M-29 9q20 12 53 0" fill="none" stroke="#ebac7b" stroke-width="2"/></g>
+              <g transform="translate(296 240)"><path d="M-19-1c1 21 35 21 38 0Z" fill="#edd7b0"/><ellipse rx="19" ry="7" cy="-1" fill="#f4e8d2"/><ellipse rx="15" ry="4.5" cy="-1" fill="#ece4c4" stroke="none"/><path d="m-8-3 2 3m6-1 2-2m5 4 2-2" stroke="#7d9066" stroke-width="1.6"/></g>
+            </g>
+            <g fill="#b08856"><ellipse cx="193" cy="246" rx="2" ry="1"/><ellipse cx="207" cy="236" rx="1.5" ry="1"/><ellipse cx="327" cy="263" rx="2" ry="1"/><ellipse cx="322" cy="268" rx="1" ry="1"/></g>
+          </g>
+        </svg>
+        <span class="scene-note note-dips" aria-hidden="true">de tweede dip <svg viewBox="0 0 56 26"><path d="M2 23c9-15 23-17 45-13m-7-7 10 8-11 5"/></svg></span>
+      </div>
+
+      <div class="invite-content">
+        <section class="event-details" aria-label="Datum, tijd en plek">
+          <div class="detail-group"><h2>WANNEER</h2><p><span class="detail-label">Datum</span><span data-content="datum" class="unfilled">[datum volgt]</span></p><p><span class="detail-label">Tijd</span><span data-content="tijd" class="unfilled">[tijd volgt]</span></p></div>
+          <div class="detail-group"><h2>WAAR</h2><p><span class="detail-label">Duiken</span><span data-content="zwemplek" class="unfilled">[zwemplek volgt]</span></p><p><span class="detail-label">Opwarmen</span><span data-content="thuisadres" class="unfilled">[adres volgt]</span></p></div>
+        </section>
+
+        <section class="the-plan" aria-labelledby="plan-title">
+          <p class="section-kicker">HET PLAN</p>
+          <h2 id="plan-title">Van de oever<br>naar de tafel.</h2>
+          <p>We nemen een frisse duik in het water vlak bij mijn huis. Daarna warmen we bij mij thuis op en proeven we elkaars favoriete dips.</p>
+        </section>
+
+        <section class="packing" aria-labelledby="packing-title">
+          <h2 id="packing-title">Dit neem je mee</h2>
+          <div class="packing-items">
+            <div class="packing-item"><svg viewBox="0 0 84 72" aria-hidden="true"><g stroke="#665242" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="m21 17-7 39 23 4 7-18 5 18 23-5-8-39Z" fill="#b95e44"/><path d="m27 22-6 33m17-32-6 34m17-34 6 33m4-33 7 30" stroke="#f2d7b0" stroke-width="4"/><path d="m21 16 43-1 1 8-45 1Z" fill="#eadaba"/><path d="m43 24-2 10m1-7 7 5" fill="none"/></g></svg><span>Zwemkleren</span></div>
+            <div class="packing-item"><svg viewBox="0 0 84 72" aria-hidden="true"><g transform="rotate(7 42 36)" stroke="#665242" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10h37l6 49-36 5Z" fill="#dbe2ce"/><path d="m24 21 37-1m-35 13 36-1m-34 13 36-2m-34 13 36-2" stroke="#779b98" stroke-width="6"/><path d="m22 10 7 54 36-5-6-49Z" fill="none"/><path d="m33 65 1 4m6-5 1 4m6-5 1 4m6-5 1 4m6-5 1 4" stroke-width="1"/></g></svg><span>Een handdoek</span></div>
+            <div class="packing-item"><svg viewBox="0 0 84 72" aria-hidden="true"><g stroke="#665242" stroke-width="1.6" stroke-linecap="round"><path d="M13 32c3 33 56 35 60 0Z" fill="#ba5c43"/><ellipse cx="43" cy="32" rx="30" ry="10" fill="#f1e3c3"/><ellipse cx="43" cy="32" rx="24" ry="6.5" fill="#dfc589" stroke="none"/><path d="M27 33c-2-7 34-7 31 0-1 4-24 4-20-1 3-2 12-2 15 0" fill="none" stroke="#b9974e" stroke-width="1.3"/><path d="m47 26 9-6-2 9m-7-3 1-7 8 1" fill="#6b814f" stroke="#6b814f" stroke-width="1"/><path d="M24 47q17 11 38 0" fill="none" stroke="#e4ad7c" stroke-width="2"/></g></svg><span>Je zelfgemaakte dip</span></div>
+          </div>
+          <p class="bread-note"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 29c-8-7 12-28 21-22 13 8-12 31-21 22Z" fill="#dfbd7e" stroke="#866440" stroke-width="1.4"/><path d="m18 12 8 6m-14 1 8 6" stroke="#f7e6bf" stroke-width="4" stroke-linecap="round"/></svg><span>Kun je zelf zuurdesembrood bakken?<br>Dat is ook meer dan welkom.</span></p>
+        </section>
+
+        <aside class="wine-note" aria-label="Glühwein van Killian">
+          <svg viewBox="0 0 56 68" aria-hidden="true"><g fill="none" stroke="#795440" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 30h31v21c0 12-31 12-31 0Z" fill="#af593f"/><path d="M42 34c17-5 17 18 0 15" stroke-width="3"/><ellipse cx="26.5" cy="30" rx="15.5" ry="4" fill="#743b3f"/><path d="M19 22c-9-9 8-12 0-20m13 20c-8-9 8-12 0-20" stroke="#aba087"/><path d="M18 38v12" stroke="#deb88a" stroke-width="2"/></g></svg>
+          <div><h2>Glühwein van Killian</h2><p>Bekend van de <span class="keep-together">MiWiGluMiBo.</span><br>Hij maakt de glühwein. Wij doen de rest.</p></div>
+        </aside>
+
+        <section class="dip-signup" aria-labelledby="signup-title">
+          <p class="section-kicker">WIE NEEMT WAT MEE?</p>
+          <h2 id="signup-title">Geen 10 kg<br><em>hummus, graag.</em></h2>
+          <p>Zet je dip in het overzicht, zodat we niet allemaal hetzelfde meenemen.</p>
+          <div class="spreadsheet-placeholder" id="spreadsheet-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 9v12"/></svg><span>Link naar dipoverzicht volgt</span></div>
+          <a class="spreadsheet-link" id="spreadsheet-link" target="_blank" rel="noopener noreferrer" hidden><span>Vul je dip in</span><svg aria-hidden="true"><use href="#icon-arrow"/></svg><span class="sr-only"> in Google Spreadsheets (opent in een nieuw tabblad)</span></a>
+          <p class="spreadsheet-help" id="spreadsheet-help">Hier komt de Google-spreadsheet.</p>
+        </section>
+
+        <footer class="invite-footer">
+          <svg class="footer-star" aria-hidden="true"><use href="#icon-star"/></svg>
+          <p class="allergies">Allergieën? <strong>App Paul!</strong></p>
+          <p class="footer-line">Tot aan de waterkant.</p>
+          <a class="replay-link" href="#" id="replay-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a8 8 0 1 1 0 7M5 3v6h6"/></svg> Nog een duik?</a>
+        </footer>
+      </div>
+    </article>
+  </main>
+  <div class="wave-wipe" id="wave-wipe" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="none"><path d="M0 60C190-60 345 150 545 60S840 0 1040 60s255 90 400-10v90H0Z"/></svg><span>plons.</span></div>
+  <noscript><style>#intro,.motion-toggle{display:none!important}#uitnodiging[hidden]{display:block!important}</style><p class="noscript-note">De uitnodiging werkt ook zonder JavaScript. Alleen de duikanimatie en de gegevens uit inhoud.js zijn dan niet beschikbaar.</p></noscript>
+</body>
+</html>
