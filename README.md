@@ -1,109 +1,76 @@
-# December-Dip
+# December-Dip - uitnodiging
 
-Een mobielvriendelijke, geïllustreerde uitnodiging met twee schermen.
-Geen installatie, accountkoppeling, buildstap, externe lettertypen of bibliotheken nodig.
+Een mobielvriendelijke, getekende tweepagina-uitnodiging voor **19 december**.
+Tik op de oever om de zwemmer in het water te laten duiken; de uitnodiging
+verschijnt automatisch. Alles draait als statische site op GitHub Pages.
 
-## Bekijken
+## Zo open je het bestand
 
-Pak het zipbestand uit en open `index.html` in een browser.
-Tik ergens op het beginscherm: de zwemmer duikt het water in en de uitnodiging opent.
-Met `Terug naar de oever` of `Nog een duik?` begin je opnieuw.
-De losse `december-dip-preview.html` die naast het zipbestand is geleverd, bevat
-hetzelfde ontwerp in één bestand. Voor verdere aanpassingen gebruik je het mapje.
+Pak de zip uit en open `december-dip/index.html` in een browser, of
+publiceer de map op GitHub Pages. Er zijn geen modules, accounts of
+bibliotheken nodig. De gebruiker kan nogmaals duiken, teruggaan en de
+decoratieve animaties pauzeren. De website houdt rekening met gebruikers
+die animaties hebben uitgeschakeld.
 
-Op een telefoon gaat het bekijken het makkelijkst via de gepubliceerde GitHub Pages-link.
-Sommige bestandsapps op telefoons tonen HTML namelijk als tekst in plaats van als website.
+## Wat is ingevuld?
 
-## Wat nog openstaat
+- Datum: **19 december** (zonder jaartal, want er is geen jaartal opgegeven).
+- Inloop: **15.00**, bij Paul thuis. Plons: **16.00**.
+- Duiklocatie: kaartlink in `inhoud.js`.
+- Opwarmen: **Willem van Hillegaersbergstraat 141D, Rotterdam**.
+- De gedeelde Google-spreadsheet is gekoppeld, met knop **Link naar de spreadsheet**.
+- Er zit een tijdelijke, fictieve illustratie op de plek van Killians foto.
+- De blaadjes en sneeuwvlokjes vallen in ongeveer dubbele grootte langs de schermranden.
+- De locaties zijn gelabeld als **Plonsplek** en **Opwarmplek**; bij zwemkleren staat een zwembroek en snorkel.
+- Glühwein van Killian staat in een wijnrode banner.
 
-Datum, tijd, zwemplek, thuisadres, de Google-spreadsheetlink en Killians foto.
-Er is geen datum, jaar, adres, telefoonnummer of externe link verzonnen.
-De tekst `Allergieën? App Paul!` is bewust geen WhatsApp-link: er is geen telefoonnummer opgegeven.
-Er is ook geen aanmeldformulier of gastenregistratie toegevoegd.
+## Foto van Killian vervangen (alleen een bestand)
 
-## Gegevens invullen
+Het mapje bevat `assets/killian.jpg`. Dit is **niet** Killian, maar een
+illustratieve voorbeeldafbeelding met het opschrift `TIJDELIJKE AFBEELDING`.
 
-Open `inhoud.js` in een teksteditor. Vul alleen de waarden tussen de dubbele
-aanhalingstekens in en laat de veldnamen, komma's en overige code staan.
+Zodra je een echte foto hebt:
 
-```js
-window.DECEMBER_DIP = {
-  datum: "",
-  tijd: "",
-  zwemplek: "",
-  thuisadres: "",
-  spreadsheetUrl: "",
-  killianFoto: "",
-  killianFotoUitsnede: "xMidYMid slice"
-};
-```
+1. Converteer de foto naar **JPG** (dit voorkomt problemen met HEIC-formaat).
+2. Noem de foto exact `killian.jpg` (kleine letters).
+3. Vervang `assets/killian.jpg` door die foto.
+4. Upload het vervangende bestand naar GitHub.
 
-Een lege waarde laat de betreffende invulplek zichtbaar. Tekst in deze velden
-wordt als gewone tekst verwerkt, niet als HTML. Langere locaties breken automatisch af.
-Een tijd mag ook een tekst zijn, zoals een starttijd en een aparte tijd voor het opwarmen.
+**Je hoeft verder helemaal geen code of instellingen te wijzigen.**
+De website schaalt de foto passend bij de polaroid-illustratie. Bij een
+foto met het gezicht aan de bovenkant kun je desgewenst in `inhoud.js`
+`killianFotoUitsnede` van `xMidYMid slice` aanpassen naar `xMidYMin slice`.
 
-## Killians foto toevoegen
+## Gegevens, adressen of links bewerken
 
-Plaats de echte foto in `assets/`, bijvoorbeeld onder de naam `killian.jpg`.
-Vul bij `killianFoto` het pad `assets/killian.jpg` in. Let op hoofdletters in bestandsnamen.
-De foto verschijnt in het staande kader achter de pan glühwein. De pan staat
-ervoor, zodat Killian achter de pan lijkt te staan. Het kader is bewust leeg
-gebleven: er is geen vervangende foto of gegenereerde persoon toegevoegd.
-
-Een staande foto is het makkelijkst. De foto wordt standaard gecentreerd en
-bijgesneden. Met `xMidYMin slice` bij `killianFotoUitsnede` blijft de bovenkant
-van de foto in beeld. JPG, PNG, WebP, AVIF en GIF worden geaccepteerd.
-Bij een ontbrekende foto blijft het lege kader zichtbaar.
-
-## Het dipoverzicht koppelen
-
-Maak zelf de Google-spreadsheet en stel de deelrechten zo in dat je gasten
-hun dip kunnen invullen. Plak de volledige `https://`-deel-link in
-`spreadsheetUrl`. Tot dat moment is de invulplek niet klikbaar. Met een
-geldige link verschijnt automatisch de knop `Vul je dip in`.
-De website maakt of beheert de spreadsheet niet.
+In `inhoud.js` staan datum, tijd, thuisadres, kaartlink, Google-spreadsheetlink
+en het vaste pad naar Killians afbeelding. Die waarden kun je later aanpassen.
+De Google-spreadsheet moet apart de juiste deelrechten hebben, zodat
+gasten kunnen invullen of ze komen en eventueel wat ze maken.
 
 ## Publiceren op GitHub Pages
 
-1. Maak een repository, of gebruik een bestaande repository voor deze uitnodiging.
-2. Upload de **inhoud** van het mapje `december-dip` naar de hoofdmap van de
-   repository. `index.html`, `styles.css`, `script.js` en `inhoud.js` moeten
-   naast elkaar staan. Neem ook de map `assets` mee. Commit de bestanden.
-3. Ga in de repository naar **Settings > Pages**.
-4. Kies bij **Source** voor **Deploy from a branch**.
-5. Selecteer de branch met je bestanden, bijvoorbeeld **main**, en **/ (root)**.
-6. Klik op **Save**. Zodra de publicatie gereed is, toont GitHub Pages de site-link.
+1. Maak een repository op GitHub (of gebruik een bestaande repository).
+2. Upload de **inhoud van de map** `december-dip/` naar de hoofdmap van de repo.
+   `index.html`, `styles.css`, `script.js` en `inhoud.js` staan naast elkaar.
+   Vergeet `assets/killian.jpg` niet. Commit de bestanden.
+3. Open **Settings > Pages** en kies bij Source **Deploy from a branch**.
+4. Selecteer de juiste branch (bijvoorbeeld `main`) en **/ (root)**.
+5. Klik op **Save** en wacht tot GitHub de Pages-link toont.
 
-Er is een leeg `.nojekyll`-bestand meegeleverd. De site bestaat volledig uit
-statische HTML, CSS, JavaScript en SVG en heeft geen Jekyll-verwerking nodig.
-Verborgen bestanden worden soms niet meegenomen bij slepen in een uploadvenster;
-de uitnodiging gebruikt geen bestanden met speciale Jekyll-namen en blijft dan ook werken.
+Er is een `.nojekyll`-bestand meegeleverd. Er is geen buildproces nodig.
 
-Upload dus niet alleen het zipbestand of alleen `index.html`. Staat het hele
-mapje juist in een submap van je repository, dan staat de site ook onder die submap.
-
-Bron: GitHub Docs, 'Configuring a publishing source for your GitHub Pages site':
+Handleiding:
 https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 ## Privacy
 
-GitHub Pages-sites zijn openbaar. Zet het thuisadres en de foto pas online als
-het de bedoeling is dat die openbaar bereikbaar zijn. De pagina vraagt
-zoekmachines met `noindex, nofollow` niet te indexeren, maar dat is **geen**
-wachtwoord, toegangsbeveiliging of garantie dat de gegevens onvindbaar blijven.
-De website gebruikt zelf geen cookies, analytics, trackers of externe lettertypen.
-De spreadsheet blijft een afzonderlijke Google-dienst met eigen deelinstellingen.
-
-## Vormgeving en toegankelijkheid
-
-- De illustraties zijn bewerkbare SVG-code in `index.html`.
-- Kleuren, afmetingen en animaties staan in `styles.css`.
-- De interactie en invulvelden staan in `script.js` en `inhoud.js`.
-- De tekst staat in het Nederlands en de knoppen werken met het toetsenbord.
-- De kleine pauzeknop stopt de decoratieve animaties en slaat de duikovergang over.
-- Een systeemvoorkeur voor minder beweging wordt gerespecteerd.
-- Zonder JavaScript is de uitnodiging leesbaar, maar werken de animatie en de
-  gegevens uit `inhoud.js` niet. De invulplekken blijven dan zichtbaar.
+Deze GitHub Pages-site is **openbaar**; het thuisadres, de locaties en een
+echte foto zijn zichtbaar voor iedereen met de link, mogelijk ook daarbuiten.
+`noindex, nofollow` is alleen een verzoek aan zoekmachines, geen toegangscontrole.
+De website bevat geen tracking of externe lettertypen.
+De spreadsheet heeft eigen deelinstellingen; test of gasten schrijfrechten
+hebben zonder jouw Google-account.
 
 ## Bestanden
 
@@ -116,6 +83,7 @@ december-dip/
   README.md
   .nojekyll
   assets/
+    killian.jpg         <-- dit ene bestand later vervangen
     favicon.svg
     LEESMIJ.txt
 ```

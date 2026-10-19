@@ -1,22 +1,20 @@
 /*
- * DECEMBER-DIP - vul hier later de ontbrekende gegevens in.
- * Laat een waarde leeg ("") om de invulplek te laten staan.
- * Zet tekst altijd tussen de aanhalingstekens.
+ * DECEMBER-DIP: pas hier later desgewenst gegevens of links aan.
+ * Vervang voor Killians echte foto ALLEEN assets/killian.jpg.
+ * Datum zonder jaar, omdat er geen jaartal is opgegeven.
  */
 window.DECEMBER_DIP = {
-  datum: "",
-  tijd: "",
+  datum: "19 december",
+  tijd: "Inloop 15.00 (bij mij thuis)\nPlons 16.00",
   zwemplek: "",
-  thuisadres: "",
+  zwemplekUrl: "https://maps.app.goo.gl/7TjVWd3sBCLxvPcD8",
+  thuisadres: "Willem van Hillegaersbergstraat 141D, Rotterdam",
 
-  // Plak hier de volledige https-link naar je Google-spreadsheet.
-  spreadsheetUrl: "",
+  spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1IUbnlOWIc04hT3nMvIPZ6gALABE17zT3/edit?usp=sharing&ouid=115656416862560789888&rtpof=true&sd=true",
 
-  // Plaats de foto in assets/ en vul bijvoorbeeld "assets/killian.jpg" in.
-  // Alleen een bestandspad binnen dit mapje; geen externe foto nodig.
-  killianFoto: "",
+  // Vervang het gelijknamige bestand in assets/, niet het pad hieronder.
+  killianFoto: "assets/killian.jpg",
 
-  // Uitsnede van de foto: "xMidYMid slice" = gecentreerd en beeldvullend.
-  // Gebruik "xMidYMin slice" als het gezicht hoger in beeld staat.
+  // Uitsnede van de foto: middelpunt, bovenkant of onderkant.
   killianFotoUitsnede: "xMidYMid slice"
 };

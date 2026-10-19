@@ -33,6 +33,21 @@
     }
   }
 
+  // De zwemlocatie is een klikbare kaartlink in plaats van een lange ruwe URL.
+  const zwemplekUrl = cleanString(config.zwemplekUrl);
+  if (zwemplekUrl) {
+    try {
+      const url = new URL(zwemplekUrl);
+      if (url.protocol !== 'https:') throw new Error('Use HTTPS.');
+      const link = byId('zwemplek-link');
+      link.href = url.href;
+      link.hidden = false;
+      document.querySelector('[data-content="zwemplek"]').hidden = true;
+    } catch (error) {
+      console.warn('December-Dip: ongeldige kaartlink.', error);
+    }
+  }
+
   // Do not turn an empty or invalid URL into a pretend working button.
   const spreadsheetUrl = cleanString(config.spreadsheetUrl);
   if (spreadsheetUrl) {
@@ -43,7 +58,6 @@
       link.href = url.href;
       link.hidden = false;
       byId('spreadsheet-placeholder').hidden = true;
-      byId('spreadsheet-help').textContent = 'Opent in Google Spreadsheets.';
     } catch (error) {
       console.warn('December-Dip: de spreadsheetlink is ongeldig; de invulplek blijft staan.', error);
     }
@@ -66,7 +80,7 @@
       image.addEventListener('load', () => {
         image.style.display = '';
         placeholder.style.display = 'none';
-        byId('feast-desc').textContent = 'Een rillende zwemmer met een gestreepte handdoek rechts, een tafel vol dips en stokbrood ervoor, en links een grote pan gl\u00fchwein. Achter de pan staat de foto van Killian.';
+        byId('feast-desc').textContent = 'Een rillende zwemmer met een gestreepte handdoek rechts, een tafel vol dips en stokbrood ervoor, en links een grote pan gl\u00fchwein. Achter de pan staat een tijdelijke voorbeeldafbeelding, later te vervangen door Killians foto.';
       }, { once: true });
       image.addEventListener('error', () => {
         image.style.display = 'none';
@@ -88,9 +102,10 @@
     const isLeft = index % 2 === 0;
     const piece = document.createElement('span');
     piece.className = `weather-piece ${isLeaf ? 'is-leaf' : 'is-snow'}`;
-    const distance = 2 + ((index * 3) % 6);
-    piece.style.setProperty('--x', isLeft ? `${distance}px` : `calc(100% - ${distance + 12}px)`);
-    piece.style.setProperty('--size', `${isLeaf ? 9 + index % 4 : 11 + index % 5}px`);
+    const size = 2 * (isLeaf ? 16 + index % 4 : 18 + index % 5);
+    // Ongeveer twee keer de straal: 32-44px, aan beide zijden goed zichtbaar.
+    piece.style.setProperty('--x', isLeft ? `${-Math.round(size * 0.16)}px` : `calc(100% - ${Math.round(size * 0.84)}px)`);
+    piece.style.setProperty('--size', `${size}px`);
     piece.style.setProperty('--duration', `${14 + index % 8}s`);
     piece.style.setProperty('--delay', `${-(index * 2.37)}s`);
     piece.style.setProperty('--sway', `${isLeft ? 3 : -3}px`);

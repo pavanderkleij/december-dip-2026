@@ -1,9 +1,9 @@
-De illustraties staan als bewerkbare SVG-code in index.html.
-Dit is bewust geen foto van een verzonnen Killian.
+Dit bestand is een tijdelijke, getekende voorbeeldafbeelding (geen echte foto van Killian).
 
-Plaats de echte foto hier, bijvoorbeeld als killian.jpg.
-Vul vervolgens in inhoud.js in:
-  killianFoto: "assets/killian.jpg"
+Als je de echte foto van Killian hebt:
+  1. Geef de foto de naam killian.jpg (JPG-formaat).
+  2. Vervang assets/killian.jpg door het nieuwe bestand.
+  3. Upload de bijgewerkte foto naar GitHub en commit de wijziging.
 
-De foto verschijnt achter de pan gluhwein. Een portretfoto werkt het best.
-Een vierkante of liggende foto wordt bijgesneden tot het staande fotovak.
+De website gebruikt het pad al. HTML, CSS, JavaScript en inhoud.js hoef je
+dan niet meer te wijzigen.
