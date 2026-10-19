@@ -1,0 +1,9 @@
+De illustraties staan als bewerkbare SVG-code in index.html.
+Dit is bewust geen foto van een verzonnen Killian.
+
+Plaats de echte foto hier, bijvoorbeeld als killian.jpg.
+Vul vervolgens in inhoud.js in:
+  killianFoto: "assets/killian.jpg"
+
+De foto verschijnt achter de pan gluhwein. Een portretfoto werkt het best.
+Een vierkante of liggende foto wordt bijgesneden tot het staande fotovak.
